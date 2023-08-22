@@ -95,6 +95,16 @@ export default function Chart1() {
               display: false,
             },
             zoom: {
+              zoom: {
+                wheel: {
+                  enabled: true,
+                },
+                pinch: {
+                  enabled: true,
+                },
+                mode: "x",
+                onZoom: handleChangeChartPosition,
+              },
               pan: {
                 enabled: true,
                 mode: "xy",

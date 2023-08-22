@@ -51,6 +51,7 @@ export default function Chart2() {
 
     setChartPosition(position);
   };
+  
 
   const beneficios = [0, 56, 20, 36, 80, 40, 30, -20, 25, 30, 12, 60];
   const meses = [
@@ -94,6 +95,16 @@ export default function Chart2() {
             display: false,
           },
           zoom: {
+            zoom: {
+              wheel: {
+                enabled: true,
+              },
+              pinch: {
+                enabled: true,
+              },
+              mode: "x",
+              onZoom: handleChangeChartPosition,
+            },
             pan: {
               enabled: true,
               mode: "xy",
